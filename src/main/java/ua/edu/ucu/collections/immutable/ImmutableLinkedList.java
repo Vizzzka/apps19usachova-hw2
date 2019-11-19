@@ -122,7 +122,9 @@ public final class ImmutableLinkedList implements ImmutableList{
     public int indexOf(Object e) {
         Node temp = this.head;
         for (int i = 0; i < this.size; ++i) {
-            if (e.equals(temp.getData()))
+            if (temp.getData() == null)
+                continue;
+            if (temp.getData().equals(e))
                 return i;
             temp = temp.getNext();
         }

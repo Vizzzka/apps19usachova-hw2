@@ -9,15 +9,15 @@ public class Stack {
         this.LinkedList = new ImmutableLinkedList();
     }
 
-    Object peek() {
+    public Object peek() {
         return LinkedList.getFirst();
     }
-    Object pop() throws Exception {
+    public Object pop() throws Exception {
         Object ex = LinkedList.getFirst();
         LinkedList = LinkedList.removeFirst();
         return ex;
     }
-    void push(Object e) throws Exception {
+    public void push(Object e) throws Exception {
         LinkedList = LinkedList.addFirst(e);
     }
 

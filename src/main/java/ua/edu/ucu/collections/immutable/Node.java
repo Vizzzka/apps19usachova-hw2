@@ -4,18 +4,18 @@ public class Node {
     private Object data;
     private Node next;
 
-    Node(){}
+    public Node() {}
 
-    Node(Object data, Node next){
+    public Node(Object data, Node next) {
         this.data = data;
         this.next = next;
     }
 
-    Node (Object data){
+    Node(Object data) {
         this.data = data;
     }
 
-    public Node copyNode(){
+    public Node copyNode() {
         return new Node(this);
     }
 

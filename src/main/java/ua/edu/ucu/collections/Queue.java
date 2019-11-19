@@ -6,19 +6,20 @@ public class Queue {
 
     private ImmutableLinkedList LinkedList;
 
-    public Queue(){
+    public Queue() {
         this.LinkedList = new ImmutableLinkedList();
     }
 
-    Object peek() {
+    public Object peek() {
         return LinkedList.getFirst();
     }
-    Object dequeue() throws Exception {
+
+    public Object dequeue() {
         Object ex = LinkedList.getFirst();
         LinkedList = LinkedList.removeFirst();
         return ex;
     }
-    void enqueue(Object e) throws Exception {
+    public void enqueue(Object e) {
         LinkedList = LinkedList.addLast(e);
     }
 

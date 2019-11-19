@@ -13,7 +13,7 @@ public final class ImmutableLinkedList implements ImmutableList{
 
     public ImmutableLinkedList(Object[] c) {
         this.size = c.length;
-        if (c.length == 0){
+        if (c.length == 0) {
             this.head = null;
             return;
         }
@@ -95,7 +95,7 @@ public final class ImmutableLinkedList implements ImmutableList{
     }
 
     @Override
-    public ImmutableLinkedList set(int index, Object e){
+    public ImmutableLinkedList set(int index, Object e) {
         this.rangeCheck(index);
         ImmutableLinkedList newLinkedList = this.copy();
         Node node = newLinkedList.findNode(index);
@@ -104,7 +104,7 @@ public final class ImmutableLinkedList implements ImmutableList{
     }
 
     @Override
-    public ImmutableLinkedList remove(int index){
+    public ImmutableLinkedList remove(int index) {
         this.rangeCheck(index);
         ImmutableLinkedList newLinkedList = this.copy();
         newLinkedList.size--;
@@ -119,9 +119,9 @@ public final class ImmutableLinkedList implements ImmutableList{
     }
 
     @Override
-    public int indexOf(Object e){
+    public int indexOf(Object e) {
         Node temp = this.head;
-        for (int i = 0; i < this.size; ++i){
+        for (int i = 0; i < this.size; ++i) {
             if (e.equals(temp.getData()))
                 return i;
             temp = temp.getNext();
@@ -130,7 +130,7 @@ public final class ImmutableLinkedList implements ImmutableList{
     }
 
     @Override
-    public int size(){
+    public int size() {
         return this.size;
     }
 
@@ -169,8 +169,9 @@ public final class ImmutableLinkedList implements ImmutableList{
 
     private Node findNode(int index) {
         Node temp = this.head;
-        for (int i = 0; i < index; ++i)
+        for (int i = 0; i < index; ++i) {
             temp = temp.getNext();
+        }
         return temp;
     }
 

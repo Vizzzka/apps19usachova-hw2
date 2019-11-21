@@ -8,6 +8,8 @@ public class StackTest {
     @Test
     public void testPeek() throws Exception {
         Stack myStack = new Stack();
+        myStack.push(new Object());
+        myStack.pop();
         myStack.push(2);
         myStack.push(3);
 
